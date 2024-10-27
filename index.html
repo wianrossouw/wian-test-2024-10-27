@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html class="no-js">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+  </head>
+  
+  <body>
+    <div class="fixed top-0 left-0 w-full h-full bg-white flex justify-center items-center z-50 transition-all duration-500 ease-out opacity-100 visible"
+    id="loadingOverlay">
+      <div class="flex flex-col items-center">
+        <div class="loader mt-4 border-t-4 border-black border-solid rounded-full w-12 h-12 animate-spin">
+        </div>
+      </div>
+    </div>
+    <div id="main" class="">
+      <header class="lg:h-[193px] max-w-[1145px] pb-[20px] h-auto m-auto">
+        <div class="flex justify-between pt-[30px]">
+          <a href="/index.html">
+            <img class="w-[70%] lg:w-full max-w-[282px] lg:h-[125px]  pl-[1rem] lg:pl-0"
+            src="./assets/beloman_logo.png" alt="beloman_logo">
+          </a>
+          <div id="mobile_menu" class="flex pr-[1rem]">
+            <button class="menu_toggle text-2xl block lg:hidden">
+              ☰
+            </button>
+          </div>
+          <div class="hidden lg:flex gap-[32px] items-center">
+            <div class="flex gap-[24px]">
+              <img class="w-[45px] h-[45px]" src="assets/location_icon.png" alt="location_icon">
+              <div>
+                <p class="lato-black text-[13px] leading-none pl-[2px]">
+                  Serving
+                </p>
+                <p class="lato-black text-[26px] leading-none">
+                  St. Clair County, IL
+                </p>
+              </div>
+            </div>
+            <div class="w-[1px] h-[51px] bg-gray-950 opacity-30">
+            </div>
+            <div class="flex gap-[24px]">
+              <img class="w-[45px] h-[45px]" src="assets/location_icon.png" alt="location-icon">
+              <div>
+                <p class="lato-black text-[13px] leading-none pl-[2px]">
+                  Contact Us Today
+                </p>
+                <p class="lato-black text-[26px] leading-none ">
+                  555-555-5555
+                </p>
+              </div>
+            </div>
+            <img src="" alt="unloaded-image">
+          </div>
+        </div>
+        <div id="mobile_menu_content" class="hidden fixed inset-0 flex flex-col gap-4 p-4 bg-white z-40">
+          <div class="menu_toggle flex justify-end cursor-pointer" id="close-menu">
+            <img class="max-w-[16px]" src="./assets/x-solid.svg" alt="close-icon">
+          </div>
+          <div class="flex flex-col gap-[20px]">
+            <a href="/sales.html" class=" lato-black w-max">
+              HVAC Sales
+            </a>
+            <div>
+              <a href="#home" class="flex gap-[4px] items-center w-max menu-toggle"
+              data-target="hidden-block">
+                <p class=" lato-black w-max">
+                  Services
+                </p>
+                <img class="w-[9px]" src="./assets/carat-down.svg" alt="down-arrow">
+              </a>
+              <div class="invisible h-0 flex flex-col gap-[12px] pl-[.5rem]" id="hidden-block">
+                <a href="">
+                  Air Conditioning
+                </a>
+                <a href="">
+                  Furnaces
+                </a>
+                <a href="">
+                  Air Handlers
+                </a>
+                <a href="">
+                  Ductless Systems
+                </a>
+                <a href="">
+                  Heat Pumps
+                </a>
+                <a href="">
+                  Indoor Air Quality
+                </a>
+                <a href="">
+                  HVAC Maintenance
+                </a>
+                <a href="">
+                  Commercial HVAC
+                </a>
+              </div>
+            </div>
+            <a href="#contact" class=" lato-black w-max">
+              Promotions
+            </a>
+            <div>
+              <a href="#about" class="flex gap-[4px] items-center w-max menu-toggle"
+              data-target="hidden-block2">
+                <p class=" lato-black">
+                  About Us
+                </p>
+                <img class="w-[9px]" src="./assets/carat-down.svg" alt="unloaded-image">
+              </a>
+              <div class="invisible h-0 flex flex-col gap-[12px] pl-[.5rem]" id="hidden-block2">
+                <a href="/why-choose-us.html">
+                  Why Choose Us?
+                </a>
+                <a href="">
+                  Customer Reviews
+                </a>
+              </div>
+            </div>
+            <a href="/contact-us.html" class=" lato-black w-max">
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </header>
+      <div style="filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.50));" class="hidden lg:flex h-[66px] bg-[#022D57] rounded-bl-[20px] rounded-br-[60px] justify-end max-w-[1145px] m-auto z-10 relative">
+        <div class="hidden lg:flex items-center pl-[104px] gap-[70px] w-full">
+          <div class="w-[70%] flex h-full relative">
+            <a href="/sales.html" class="text-white font-bold h-full flex flex-col justify-center w-[20%] text-center cursor-pointer">
+              HVAC Sales
+            </a>
+            <div class="relative group w-[20%] text-center">
+                <div class="text-white font-bold h-full flex flex-row justify-center text-center hover:bg-[#005086] px-[35px] cursor-pointer gap-[11px]">
+                    <span class="flex flex-col justify-center">Services</span>
+                    <img class="mt-[2px]" src="./assets/caret-white.svg" alt="unloaded-image">
+                </div>
+
+              <div class="hidden group-hover:flex gap-[11px] flex-col absolute bg-white top-full left-0 w-[206px] py-[17px] px-[28px] shadow-lg mt-[-4px] ml-[4px]">
+                <p class="text-black hover:text-[#EC001B] text-left w-full h-[35px] cursor-pointer">
+                  Installation
+                </p>
+                <p class="text-black hover:text-[#EC001B] text-left w-full h-[35px] cursor-pointer">
+                  Repair
+                </p>
+                <p class="text-black hover:text-[#EC001B] text-left w-full h-[35px] cursor-pointer">
+                  Maintenance
+                </p>
+              </div>
+            </div>
+            <p class="text-white font-bold h-full flex flex-col justify-center w-[20%] text-center">
+              Promotions
+            </p>
+            <div class="relative group w-[20%] text-center">
+                <div class="text-white font-bold h-full flex flex-row justify-center text-center hover:bg-[#005086] px-[35px] cursor-pointer gap-[11px]">
+                    <span class="flex flex-col justify-center text-nowrap">About Us</span>
+                    <img class="mt-[2px]" src="./assets/caret-white.svg" alt="unloaded-image">
+                </div>
+              <div class="hidden group-hover:flex gap-[11px] flex-col absolute bg-white top-full left-0 w-[206px] py-[17px] px-[28px] shadow-lg mt-[-4px] ml-[4px]">
+                <a href="/why-choose-us.html" class="text-black hover:text-[#EC001B] text-left w-full h-[35px] cursor-pointer">
+                  Why Choose Us
+                </a>
+                <p class="text-black hover:text-[#EC001B] text-left w-full h-[35px] cursor-pointer">
+                  Customer Reviews
+                </p>
+              </div>
+            </div>
+            <a href="contact-us.html" class="text-white font-bold h-full flex flex-col justify-center w-[20%] text-center cursor-pointer">
+              Contact Us
+            </a>
+          </div>
+          <div class="bg-[#EC001B] w-[30%] h-full rounded-br-[20px] flex flex-col justify-center items-center group hover:bg-white cursor-pointer transition-colors duration-200">
+            <p class="text-white font-bold text-[23px] nunito-sans-black leading-none cursor-pointer group-hover:text-[#EC001B] transition-colors duration-200">
+              24/7 Emergency
+            </p>
+            <p class="text-white font-bold text-[20px] leading-none nunito-sans-semibold cursor-pointer group-hover:text-[#EC001B] transition-colors duration-200">
+              Service Available
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-0 lg:mt-[-63px]">
+        <img class="w-full bg-contain bg-no-repeat" src="./assets/banner.jpg"
+        alt="unloaded-image">
+      </div>
+      <div class="max-w-[1143px] w-full m-auto h-[207px] px-[1rem] lg:px-0 mt-[-160px] lg:mt-[-300px] flex flex-col lg:flex-row ">
+        <div class="bg-[#022D57] w-full lg:w-1/2 rounded-b-[0px] rounded-tl-[15px] rounded-tr-[15px] lg:rounded-tr-[0px] lg:rounded-l-[15px] border-white border-solid border-[6px] lg:border-l-[6px] lg:border-t-[6px] flex justify-center items-center">
+          <div class="flex">
+            <div class="flex flex-col gap-[8px] pt-[10px] pl-[10px] pb-[10px] lg:pt-0 lg:pl-0 lg:pb-0">
+              <img src="./assets/49.svg" alt="unloaded-image">
+              <img src="./assets/stars_white.svg" alt="unloaded-image">
+            </div>
+            <div class="w-[1.5px] bg-white mx-[15px] lg:mx-[30px]">
+            </div>
+            <div class="flex flex-col justify-center px-[10px] lg:px-0">
+              <img src="./assets/Google.svg" alt="unloaded-image">
+              <img src="./assets/customer_review.svg" alt="unloaded-image">
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#000000] w-full lg:w-1/2 rounded-t-[0px] rounded-b-[15px] border-t-0 lg:rounded-[0px] lg:rounded-r-[15px] lg:border-white border-solid border-[6px] lg:border-r-[6px] lg:border-t-[6px] justify-center items-center flex flex-col hover:bg-[#EC001B] py-[10px] lg:py-0 transition-colors duration-200">
+          <p class="text-white lato-regular text-[18px] flex gap-[4px] lg:hidden leading-none">
+            Your Local
+            <span class="lato-bold text-white">
+              HVAC Experts
+            </span>
+          </p>
+          <p class="text-white lato-regular text-[24px] lg:text-[49px] leading-[52px] hidden lg:flex">
+            Your Local
+          </p>
+          <p class="text-white lato-bold text-[24px] lg:text-[49px] leading-[52px] hidden lg:flex">
+            HVAC Experts
+          </p>
+          <div class="flex items-center gap-[15px] mt-[15px]">
+            <p class="text-white lato-black text-[20px]">
+              Book Online Today
+            </p>
+            <img class="max-w-[14px] max-h-[14px]" src="./assets/arrows.svg" alt="unloaded-image">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-center flex-col w-full text-center mt-[30px] lg:mt-[90px]">
+      <div class="max-w-[1039px] lg:mx-auto mx-4 relative">
+        <h2 class="text-[#022D57] lato-black text-[36px] text-center">
+          We Always Put Our Customers First
+        </h2>
+        <h3 class="text-[#000000] text-[20px] pb-[60px]">
+          Our 5-star reviews speak for themselves!
+        </h3>
+        <div id="testimonial-container" class="overflow-hidden relative">
+          <div id="testimonials" class="flex transition-transform duration-500 ease-out">
+            <div class="bg-white shadow-md rounded-lg  min-w-full flex-shrink-0 flex flex-col">
+              <img class="max-h-[25px]" src="./assets/stars.svg" alt="unloaded-image">
+              <div class="flex justify-center text-center">
+                <p class="max-w-[70vw] lg:max-w-[915px] text-balance pt-[30px]">
+                  When my A/C stopped blowing cold air, I promptly called for assistance
+                  late in the day. To my satisfaction, they offered me a same-day, after-hours
+                  appointment or the option to schedule it as the first task of the following
+                  day. Choosing the latter, I was pleased to find that the technician arrived
+                  punctually. Remarkably, within just 10 minutes, he accurately diagnosed
+                  the problem and efficiently fixed it in less than 15 minutes. The technician's
+                  kindness and professionalism were evident throughout the process, and to
+                  top it off, their pricing was fair. With such exceptional service, I have
+                  no doubt that I'll be reaching out to them for any future HVAC needs.
+                </p>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <h3 class="font-semibold  mb-[38px] mt-[20px]">
+                  -Amy Morse (A/C Repair)
+                </h3>
+                <a class="bg-[#EC001B] hover:bg-[#022D57] flex gap-[11px] justify-center items-center rounded-[5px] px-[15px] h-[34px] transition-colors duration-200">
+                  <p class="lato-bold text-white text-[18px] transition-colors duration-200">
+                    Read More
+                  </p>
+                  <img class="max-w-[14px] max-h-[14px]" src="./assets/arrows.svg" alt="unloaded-image">
+                </a>
+              </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg  min-w-full flex-shrink-0 flex flex-col">
+              <img class="max-h-[25px]" src="./assets/stars.svg" alt="unloaded-image">
+              <div class="flex justify-center text-center">
+                <p class="max-w-[70vw] lg:max-w-[915px] text-balance pt-[30px]">
+                  When my A/C stopped blowing cold air, I promptly called for assistance
+                  late in the day. To my satisfaction, they offered me a same-day, after-hours
+                  appointment or the option to schedule it as the first task of the following
+                  day. Choosing the latter, I was pleased to find that the technician arrived
+                  punctually. Remarkably, within just 10 minutes, he accurately diagnosed
+                  the problem and efficiently fixed it in less than 15 minutes. The technician's
+                  kindness and professionalism were evident throughout the process, and to
+                  top it off, their pricing was fair. With such exceptional service, I have
+                  no doubt that I'll be reaching out to them for any future HVAC needs.
+                </p>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <h3 class="font-semibold  mb-[38px] mt-[20px]">
+                  -Jon Doe (A/C Repair)
+                </h3>
+                <a class="bg-[#EC001B] hover:bg-[#022D57] flex gap-[11px] justify-center items-center rounded-[5px] px-[15px] h-[34px] transition-colors duration-200">
+                  <p class="lato-bold text-white text-[18px] transition-colors duration-200">
+                    Read More
+                  </p>
+                  <img class="max-w-[14px] max-h-[14px]" src="./assets/arrows.svg" alt="unloaded-image">
+                </a>
+              </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg  min-w-full flex-shrink-0 flex flex-col">
+              <img class="max-h-[25px]" src="./assets/stars.svg" alt="unloaded-image">
+              <div class="flex justify-center text-center">
+                <p class="max-w-[70vw] lg:max-w-[915px] text-balance pt-[30px]">
+                  When my A/C stopped blowing cold air, I promptly called for assistance
+                  late in the day. To my satisfaction, they offered me a same-day, after-hours
+                  appointment or the option to schedule it as the first task of the following
+                  day. Choosing the latter, I was pleased to find that the technician arrived
+                  punctually. Remarkably, within just 10 minutes, he accurately diagnosed
+                  the problem and efficiently fixed it in less than 15 minutes. The technician's
+                  kindness and professionalism were evident throughout the process, and to
+                  top it off, their pricing was fair. With such exceptional service, I have
+                  no doubt that I'll be reaching out to them for any future HVAC needs.
+                </p>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <h3 class="font-semibold  mb-[38px] mt-[20px]">
+                  -Pete Stevens (A/C Repair)
+                </h3>
+                <a class="bg-[#EC001B] hover:bg-[#022D57] flex gap-[11px] justify-center items-center rounded-[5px] px-[15px] h-[34px] transition-colors duration-200">
+                  <p class="lato-bold text-white text-[18px] transition-colors duration-200">
+                    Read More
+                  </p>
+                  <img class="max-w-[14px] max-h-[14px]" src="./assets/arrows.svg" alt="unloaded-image">
+                </a>
+              </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg  min-w-full flex-shrink-0 flex flex-col">
+              <img class="max-h-[25px]" src="./assets/stars.svg" alt="unloaded-image">
+              <div class="flex justify-center text-center">
+                <p class="max-w-[70vw] lg:max-w-[915px] text-balance pt-[30px]">
+                  When my A/C stopped blowing cold air, I promptly called for assistance
+                  late in the day. To my satisfaction, they offered me a same-day, after-hours
+                  appointment or the option to schedule it as the first task of the following
+                  day. Choosing the latter, I was pleased to find that the technician arrived
+                  punctually. Remarkably, within just 10 minutes, he accurately diagnosed
+                  the problem and efficiently fixed it in less than 15 minutes. The technician's
+                  kindness and professionalism were evident throughout the process, and to
+                  top it off, their pricing was fair. With such exceptional service, I have
+                  no doubt that I'll be reaching out to them for any future HVAC needs.
+                </p>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <h3 class="font-semibold  mb-[38px] mt-[20px]">
+                  -Tom Black (A/C Repair)
+                </h3>
+                <a class="bg-[#EC001B] hover:bg-[#022D57] flex gap-[11px] justify-center items-center rounded-[5px] px-[15px] h-[34px] transition-colors duration-200">
+                  <p class="lato-bold text-white text-[18px] transition-colors duration-200">
+                    Read More
+                  </p>
+                  <img class="max-w-[14px] max-h-[14px]" src="./assets/arrows.svg" alt="unloaded-image">
+                </a>
+              </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg  min-w-full flex-shrink-0 flex flex-col">
+              <img class="max-h-[25px]" src="./assets/stars.svg" alt="unloaded-image">
+              <div class="flex justify-center text-center">
+                <p class="max-w-[70vw] lg:max-w-[915px] text-balance pt-[30px]">
+                  When my A/C stopped blowing cold air, I promptly called for assistance
+                  late in the day. To my satisfaction, they offered me a same-day, after-hours
+                  appointment or the option to schedule it as the first task of the following
+                  day. Choosing the latter, I was pleased to find that the technician arrived
+                  punctually. Remarkably, within just 10 minutes, he accurately diagnosed
+                  the problem and efficiently fixed it in less than 15 minutes. The technician's
+                  kindness and professionalism were evident throughout the process, and to
+                  top it off, their pricing was fair. With such exceptional service, I have
+                  no doubt that I'll be reaching out to them for any future HVAC needs.
+                </p>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <h3 class="font-semibold  mb-[38px] mt-[20px]">
+                  -Jane Doe (A/C Repair)
+                </h3>
+                <a class="bg-[#EC001B] hover:bg-[#022D57] flex gap-[11px] justify-center items-center rounded-[5px] px-[15px] h-[34px] transition-colors duration-200">
+                  <p class="lato-bold text-white text-[18px] transition-colors duration-200">
+                    Read More
+                  </p>
+                  <img class="max-w-[14px] max-h-[14px]" src="./assets/arrows.svg" alt="unloaded-image">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-y-0 left-0 flex items-center">
+          <button id="prev">
+            <img class="max-w-[25px] max-h-[25px]" src="./assets/t_arrow_left.svg"
+            alt="unloaded-image">
+          </button>
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center">
+          <button id="next">
+            <img class="max-w-[25px] max-h-[25px]" src="./assets/t_arrow_right.svg"
+            alt="unloaded-image">
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="mt-[80px] flex flex-col w-full">
+      <div class="w-full bg-[#022D57] py-[46px] flex flex-col lg:flex-row justify-center items-center gap-[60px] px-[1rem] lg:pl-[120px] lg:pr-[113px]">
+        <div>
+          <p class="text-white lato-black text-[40px] leading-none pb-[25px]">
+            Up to $1,800 Rebate on Daikin Fit Systems*
+          </p>
+          <p class="text-white lato-regular text-[16px] leading-none">
+            *Conditions apply. Call us for more details.
+          </p>
+        </div>
+        <a href="#">
+          <button class="bg-[#EC001B] h-[43px] w-[290px] rounded-[5px] group hover:bg-white transition-colors duration-200">
+            <div class="flex items-center gap-[4px] justify-center">
+              <p class="text-white group-hover:text-[#EC001B] lato-bold leading-none transition-colors duration-200">
+                View More
+              </p>
+              <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="text-white group-hover:text-[#EC001B] group-hover:stroke-[#EC001B]">
+                <path d="M7.1148 0.576182C7.00975 0.619718 6.913 0.680804 6.82867 0.756708L6.79241 0.793013C6.60514 0.980513 6.49995 1.23468 6.49995 1.49968C6.49995 1.76462 6.60509 2.01873 6.79228 2.20622C6.79232 2.20626 6.79236 2.2063 6.79241 2.20635L10.7303 6.14622L11.0837 6.49977L10.7302 6.85323L6.79366 10.7898C6.61335 10.9781 6.5137 11.2295 6.51609 11.4904C6.51849 11.7526 6.62378 12.0034 6.80928 12.1887C6.99477 12.374 7.24564 12.4791 7.50784 12.4812C7.76876 12.4834 8.02014 12.3834 8.20836 12.2028L13.2049 7.20635C13.3921 7.01885 13.4973 6.76468 13.4973 6.49968C13.4973 6.23468 13.3921 5.98051 13.2049 5.79301L8.20508 0.793233L8.20497 0.79312C8.1121 0.700194 8.00183 0.626477 7.88047 0.576182C7.7591 0.525887 7.62901 0.5 7.49763 0.5C7.36626 0.5 7.23617 0.525887 7.1148 0.576182ZM1.1148 0.576182C1.00975 0.619716 0.913013 0.680798 0.828679 0.756697L0.792408 0.793013C0.605141 0.980514 0.499954 1.23468 0.499954 1.49968C0.499954 1.76462 0.605092 2.01873 0.792278 2.20622C0.792321 2.20626 0.792365 2.2063 0.792408 2.20635L4.73028 6.14622L5.08365 6.49977L4.73019 6.85323L0.793661 10.7898C0.613344 10.9781 0.513703 11.2295 0.516092 11.4904C0.518494 11.7526 0.623781 12.0034 0.809278 12.1887C0.994774 12.374 1.24564 12.4791 1.50784 12.4812C1.76876 12.4834 2.02013 12.3834 2.20835 12.2029L7.20486 7.20635C7.39213 7.01885 7.49731 6.76468 7.49731 6.49968C7.49731 6.23468 7.39213 5.98051 7.20486 5.79301L2.20508 0.793233L2.20497 0.79312C2.1121 0.700193 2.00183 0.626476 1.88047 0.576182C1.7591 0.525887 1.62901 0.5 1.49763 0.5C1.36626 0.5 1.23617 0.525887 1.1148 0.576182Z"
+                fill="currentColor" stroke="white" />
+              </svg>
+            </div>
+          </button>
+        </a>
+      </div>
+      <div class="flex flex-col lg:flex-row">
+        <div class="w-full lg:w-1/2">
+          <iframe class="min-h-[300px] md:min-h-max" width="100%" height="100%"
+          src="https://www.youtube.com/embed/18EF1pDH9pc?si=BHc4cWrE81N5TqAZ" title="YouTube video player"
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+          </iframe>
+        </div>
+        <div class="bg-black w-full lg:w-1/2 pl-4 lg:pl-[54px] pr-4 lg:pr-[34px] px-4 lg:px-[42px] flex flex-col gap-[30px] lg:gap-[38px] py-4 lg:py-[42px]">
+          <h2 class="text-white lato-black text-[36px]">
+            If Comfort Is Your Plan Call the BEL- O MAN!™
+          </h2>
+          <p class="text-white lato-regular text-[18px]">
+            The most trusted name in home comfort, BELOMAN, instills confidence from
+            the moment our clients call. Our heating and cooling specialists are factory-certified,
+            giving them an incredible background of knowledge and experience.
+          </p>
+          <p class="text-white lato-regular text-[18px]">
+            Whether you have high energy bill concerns, need maintenance for your
+            HVAC system, or are considering upgrading your existing air conditioner
+            to a modern, energy-efficient style, BELOMAN is the place to call.
+          </p>
+          <div class="flex gap-[18px]">
+            <div class="flex flex-col items-center justify-between">
+              <div class="flex items-baseline gap-[9px]">
+                <img class="max-w-[14px] max-h-[14px]" src="./assets/check-icon.svg" alt="unloaded-image">
+                <p class="text-white lato-regular">
+                  Serving the Metro East Since 1959
+                </p>
+              </div>
+              <div class="flex items-baseline gap-[9px]">
+                <img class="max-w-[14px] max-h-[14px]" src="./assets/check-icon.svg" alt="unloaded-image">
+                <p class="text-white lato-regular">
+                  Second-Generation Family-Owned
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-[9px] items-start">
+              <div class="flex items-baseline  gap-[9px]">
+                <img class="max-w-[14px] max-h-[14px]" src="./assets/check-icon.svg" alt="unloaded-image">
+                <p class="text-white lato-regular leading-[110%]">
+                  1,250+ Years of Combined Employee Experience
+                </p>
+              </div>
+              <div class="flex items-baseline gap-[9px]" grid grid-cols-1 gap-4 sm:grid-cols-2>
+                <img class="max-w-[14px] max-h-[14px]" src="./assets/check-icon.svg" alt="unloaded-image">
+                <p class="text-white lato-regular">
+                  Local & National Awards
+                </p>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="cursor-pointer flex flex-col lg:flex-row gap-0 lg:gap-[44px] group">
+            <p class="text-white lato-black text-[36px]">
+              Call Us Now
+            </p>
+            <div class="flex items-center gap-[14px] w-fit lg:w-auto border-b-[2px] border-white group-hover:border-[#EC001B] transition-colors duration-200">
+              <img class="max-w-[25px] max-h-[25px]" src="./assets/phone-icon.svg" alt="unloaded-image">
+              <p class="text-white text-[36px]">
+                555-555-555
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col justify-center w-full text-center mt-[38px]">
+      <div class="flex w-full justify-center">
+        <img class="max-w-[114px]" src="./assets/aloha-guy.jpg" alt="unloaded-image">
+      </div>
+      <h2 class="lato-black text-[#022D57] text-[36px] px-4 lg:px-0">
+        How Can We Help You Today?
+      </h2>
+      <h3 class="lato-regular text-[20px]">
+        We are here for you 24/7!
+      </h3>
+      <div class="mt-[50px] flex gap-[35px] lg:justify-center overflow-x-scroll mx-[1rem]">
+        <div class="bg-[#EC001B] hover:bg-[#022D57] px-[4px] pt-[4px] w-[180px] h-auto rounded-[7px] flex flex-col flex-shrink-0 transition-colors duration-200">
+          <div class="flex-grow max-h-[250px]">
+            <img class="rounded-[3px] w-full h-full object-cover" src="./assets/american-ac.jpg"
+            alt="unloaded-image">
+          </div>
+          <div class="flex gap-[11px] justify-center items-center">
+            <p class="lato-bold text-white text-[18px] py-[17px]">
+              Air Conditioning
+            </p>
+            <img class="max-w-[14px] max-h-[14px]" src="./assets/arrows.svg" alt="unloaded-image">
+          </div>
+        </div>
+        <div class="bg-[#EC001B] hover:bg-[#022D57] px-[4px] pt-[4px] w-[180px] h-auto rounded-[7px] flex flex-col flex-shrink-0 transition-colors duration-200">
+          <div class="flex-grow max-h-[250px]">
+            <img class="rounded-[3px] w-full h-full object-cover" src="./assets/american-furnace.jpg"
+            alt="unloaded-image">
+          </div>
+          <div class="flex gap-[11px] justify-center items-center">
+            <p class="lato-bold text-white text-[18px] py-[17px]">
+              Furnaces
+            </p>
+            <img class="max-w-[14px] max-h-[14px]" src="./assets/arrows.svg" alt="unloaded-image">
+          </div>
+        </div>
+        <div class="bg-[#EC001B] hover:bg-[#022D57] px-[4px] pt-[4px] w-[180px] h-auto rounded-[7px] flex flex-col flex-shrink-0 transition-colors duration-200">
+          <div class="flex-grow max-h-[250px]">
+            <img class="rounded-[3px] w-full h-full object-cover" src="./assets/american-ac2.jpg"
+            alt="unloaded-image">
+          </div>
+          <div class="flex gap-[11px] justify-center items-center">
+            <p class="lato-bold text-white text-[18px] py-[17px]">
+              Ductless Systems
+            </p>
+            <img class="max-w-[14px] max-h-[14px]" src="./assets/arrows.svg" alt="unloaded-image">
+          </div>
+        </div>
+        <div class="bg-[#EC001B] hover:bg-[#022D57] px-[4px] pt-[4px] w-[180px] h-auto rounded-[7px] flex flex-col flex-shrink-0 transition-colors duration-200">
+          <div class="flex-grow max-h-[250px]">
+            <img class="rounded-[3px] w-full h-full object-cover" src="./assets/american-ac3.jpg"
+            alt="unloaded-image">
+          </div>
+          <div class="flex gap-[11px] justify-center items-center">
+            <p class="lato-bold text-white text-[18px] py-[17px]">
+              Heat Pumps
+            </p>
+            <img class="max-w-[14px] max-h-[14px]" src="./assets/arrows.svg" alt="unloaded-image">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="relative flex items-center justify-center my-[40px] max-w-[1138px] w-full m-auto">
+      <div class="w-full border-t border-gray-300">
+      </div>
+      <div class="absolute top-[-1px]">
+        <svg width="39" height="18" viewBox="0 0 39 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M1 0.708008L20.1417 16.9913L38.1464 0.708008"
+          fill="white" />
+          <path d="M1 0.708008L20.1417 16.9913L38.1464 0.708008" stroke="#CDCCCD"
+          />
+        </svg>
+      </div>
+    </div>
+    <div class="flex justify-start lg:justify-center items-center gap-[70px] my-[35px] overflow-scroll px-[1rem]">
+      <img class="max-h-[110px] max-w-[150px]" src="./assets/google-review.jpg"
+      alt="unloaded-image">
+      <img class="max-h-[110px] max-w-[199px]" src="./assets/facebook-review.jpg"
+      alt="unloaded-image">
+      <img class="max-h-[110px] max-w-[104px]" src="./assets/nate-review.jpg"
+      alt="unloaded-image">
+      <img class="max-h-[58px] max-w-[219px]" src="./assets/ab-review.jpg" alt="unloaded-image">
+      <img class="max-h-[107px] max-w-[194px]" src="./assets/daikin-review.jpg"
+      alt="unloaded-image">
+    </div>
+    <div class="bg-[url('/assets/footer_img.png')] bg-cover bg-no-repeat overflow-x-hidden">
+      <div class="w-[120vw] h-[200px] -ml-[10vw] rounded-b-[50%] bg-white mt-[-150px]">
+      </div>
+      <div class="bg-[#D8D8D8] opacity-50 h-[1px] w-full mt-[48px] max-w-[1145px] mx-auto flex justify-center">
+      </div>
+      <footer class="pb-0 justify-center lg:pb-[40px] h-[204px] max-w-[1145px] m-auto flex flex-col lg:justify-end">
+        <div class="flex flex-col px-4 lg:px-0 sm:flex-row justify-between pt-[30px]">
+          <img class="w-[282px] h-[125px] hidden sm:block" src="./assets/beloman_logo.png"
+          alt="unloaded-image">
+          <div class="flex flex-col lg:flex-row gap-[32px] items-center">
+            <div class="flex justify-start lg:justify-center gap-[24px] w-full lg:w-auto">
+              <img class="w-[45px] h-[45px] " src="./assets/location_icon_alt.svg" alt="unloaded-image">
+              <div>
+                <p class="lato-black text-[13px] text-white leading-none pl-[2px]">
+                  Serving
+                </p>
+                <p class="lato-black text-[26px] text-white leading-none">
+                  St. Clair County, IL
+                </p>
+              </div>
+            </div>
+            <div class="w-[1px] h-[51px] bg-gray-950 opacity-30 hidden lg:block">
+            </div>
+            <div class="flex justify-start lg:justify-center gap-[24px] w-full lg:w-auto">
+              <img class="w-[45px] h-[45px] " src="./assets/location_icon_alt.svg" alt="unloaded-image">
+              <div>
+                <p class="lato-black text-[13px] text-white leading-none pl-[2px]">
+                  Contact Us Today
+                </p>
+                <p class="lato-black text-[26px] text-white leading-none">
+                  555-555-5555
+                </p>
+              </div>
+            </div>
+            <img src="" alt="unloaded-image">
+          </div>
+      </footer>
+      </div>
+      <div class="bg-black w-full px-4 py-[15px]">
+        <p class="text-white nunito-sans-regular lg:flex justify-center hidden">
+          Copyright © 2023 Beloman. All Rights Reserved. Privacy Policy
+        </p>
+        <p class="text-white nunito-sans-regular lg:hidden flex justify-start">
+          Copyright © 2023 Beloman.
+          <br>
+          All Rights Reserved.
+          <br>
+          Privacy Policy
+        </p>
+      </div>
+      <script src="script.js">
+      </script>
+  </body>
