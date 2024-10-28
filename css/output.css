@@ -1519,6 +1519,14 @@ video {
   background-image: url('./assets/learnmore-bg.png');
 }
 
+.bg-\[url\(\'assets\\footer_img\.png\'\)\] {
+  background-image: url('assets\footer_img.png');
+}
+
+.bg-\[url\(\'assets\/footer_img\.png\'\)\] {
+  background-image: url('assets/footer_img.png');
+}
+
 .bg-contain {
   background-size: contain;
 }
